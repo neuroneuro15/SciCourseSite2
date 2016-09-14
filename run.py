@@ -1,13 +1,13 @@
 from app import app
 from flask import render_template
-from models import WorkshopDay
+from models import Day
 
 
 lessons = ['This', 'is', 'just', 'testing', 'you']
 
 @app.route('/')
 def hello_world():
-    days = WorkshopDay.query.all()
+    days = Day.query.all()
     return render_template('index.html', days=days, lessons=lessons)
 
 
