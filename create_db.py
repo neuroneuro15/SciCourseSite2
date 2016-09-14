@@ -1,8 +1,10 @@
 from app import db
 from models import Day, Lesson
 from collections import OrderedDict
+import os
 
 # Delete the Database, so we can completely start anew.
+
 db.drop_all()
 
 # Create Database
@@ -31,21 +33,26 @@ day_plan['Organizing Data in Tables'] = [
     'Higher-Level Plotting Libraries: Pandas and Seaborn'
     'Good Data Visualization Practices'
     ]
-
+#
 
 for day_title, lesson_titles in day_plan.items():
     day = Day(title=day_title)
     db.session.add(day)
     for lesson_title in lesson_titles:
-        lesson = Lesson(title=lesson_title)
+        lesson = Lesson(title=lesson_title, day=day)
         db.session.add(lesson)
-
 
 # Save all changes to the database file
 db.session.commit()
-
 
 # Confirm that the data is there!
 days = Day.query.all()
 for day in days:
     print(day)
+
+lessons = Lesson.query.all()
+for lesson in lessons:
+    print(lesson.day, lesson)
+
+
+
