@@ -49,10 +49,8 @@ db.session.commit()
 days = Day.query.all()
 for day in days:
     print(day)
+    print(day.lessons.all())
 
-lessons = Lesson.query.all()
-for lesson in lessons:
-    print(lesson.day, lesson)
 
 
 

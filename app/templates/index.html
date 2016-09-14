@@ -8,7 +8,7 @@ Example Page 32
 {% block styles %}
 {{super()}}
 {#    <!-- Bootstrap Core CSS -->#}
-{#    <link href="../static/css/bootstrap.min.css" rel="stylesheet">#}
+{#    <link href="../app/static/css/bootstrap.min.css" rel="stylesheet">#}
 
     <!-- Custom CSS -->
     <link href="../app/static/css/3-col-portfolio.css" rel="stylesheet">
@@ -71,14 +71,14 @@ Example Page 32
     </div>
 
     <div class="row">
-    {% for lesson in lessons %}
+    {% for lesson in day.lessons.all() %}
 
         <div class="col-md-4 portfolio-item">
             <a href="#">
                 <img class="img-responsive" src="http://placehold.it/700x400" alt="">
             </a>
             <h3>
-                <a href="#">Lesson {{ lesson }}</a>
+                <a href="#"> {{ lesson.title }}</a>
             </h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
         </div>

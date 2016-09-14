@@ -8,7 +8,7 @@ lessons = ['This', 'is', 'just', 'testing', 'you']
 @app.route('/')
 def hello_world():
     days = Day.query.all()
-    return render_template('index.html', days=days, lessons=lessons)
+    return render_template('index.html', days=days)
 
 
 if __name__ == '__main__':
