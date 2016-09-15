@@ -1,6 +1,6 @@
 from flask import Flask
 from flask_bootstrap import Bootstrap
-from flask_flatpages import FlatPages
+from flask_flatpages import FlatPages, pygmented_markdown, pygments_style_defs
 
 app = Flask(__name__)
 
