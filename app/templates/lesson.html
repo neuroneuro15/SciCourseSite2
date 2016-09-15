@@ -1,18 +1,22 @@
 {% extends "base.html" %}
 
-{% block styles %}
-    {{super()}}
-    <link href="static/css/3-col-portfolio.css" rel="stylesheet">
+{% block title %}
+    Python MPI Workshop: {{ page.title }}
 {% endblock %}
 
-
-
 {% block body %}
+    {{ super() }}
 
     <div class="container">
 
+        {# Lesson Title #}
+        <hr>
+        <h1>
+            {{ page.title }}
+        </h1>
+        <hr>
 
-    {{ page.html|safe }}
+        {{ page.html|safe }}
 
     </div>
 

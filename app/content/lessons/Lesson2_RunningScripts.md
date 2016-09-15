@@ -6,6 +6,7 @@ summary: We'll learn how to run Python scripts and packages
 # Scripts are Great
 
 There are several reasons why we write scripts:
+
   - They are easy to use
   - They can be easily shared
   - They save us time!

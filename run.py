@@ -4,6 +4,7 @@ from itertools import groupby
 
 
 @app.route('/')
+@app.route('/index')
 def index():
     """Homepage"""
     pages = sorted(flatpages, key=lambda p: p.path)  # sort pages by filename
