@@ -1,14 +1,17 @@
-from app import app
+from app import app, flatpages, LESSON_DIR
 from flask import render_template
-from models import Day
+from itertools import groupby
 
-
-lessons = ['This', 'is', 'just', 'testing', 'you']
 
 @app.route('/')
 def hello_world():
-    days = Day.query.all()
+
+    pages = sorted(flatpages, key=lambda p: p.path)
+    print(pages)
+    days = groupby(pages, lambda p: p.meta['day'])
+
     return render_template('index.html', days=days)
+
 
 
 if __name__ == '__main__':
