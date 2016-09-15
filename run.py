@@ -3,9 +3,14 @@ from flask import render_template
 from itertools import groupby
 
 
+
 @app.route('/')
 @app.route('/index')
 def index():
+    return render_template('landing.html')
+
+@app.route('/lessons')
+def lesson_plan():
     """Homepage"""
     lesson_pages = [p for p in flatpages if LESSON_DIR in p.path]
     lesson_pages = sorted(lesson_pages, key=lambda p: p.path)  # sort pages by filename
@@ -25,6 +30,10 @@ def final_project():
     return render_template('lesson.html', page=page)
 
 
+
+@app.route('/about')
+def aboutme():
+    return render_template('aboutme.html')
 
 @app.route('/pygments.css')
 def pygments_css():
