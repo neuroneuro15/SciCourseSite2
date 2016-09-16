@@ -7,16 +7,14 @@ from itertools import groupby
 @app.route('/')
 @app.route('/index')
 def index():
-    return render_template('landing.html')
-
-@app.route('/lessons')
-def lesson_plan():
     """Homepage"""
     lesson_pages = [p for p in flatpages if LESSON_DIR in p.path]
     lesson_pages = sorted(lesson_pages, key=lambda p: p.path)  # sort pages by filename
-    days = groupby(lesson_pages, lambda p: p.meta['day'])  # group pages into days [(0, [Page1, Page2]), (1, [Page3, Page4]),...]
+    days = groupby(lesson_pages,
+                   lambda p: p.meta['day'])  # group pages into days [(0, [Page1, Page2]), (1, [Page3, Page4]),...]
 
-    return render_template('index.html', days=days)
+    return render_template('landing.html', days=days)
+
 
 @app.route('/lessons/<title>')
 def lesson(title):
@@ -29,11 +27,6 @@ def final_project():
     page = flatpages.get('final_project')
     return render_template('lesson.html', page=page)
 
-
-
-@app.route('/about')
-def aboutme():
-    return render_template('aboutme.html')
 
 @app.route('/pygments.css')
 def pygments_css():

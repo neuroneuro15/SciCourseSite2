@@ -48,43 +48,62 @@
 
     <!-- Page Content -->
 
-	<a  name="services"></a>
-    <div class="content-section-a">
+{#	<a  name="services"></a>#}
+<!-- content-section-a and content-section-b -->
+{#    <div class="content-section-a">#}
 
-        <div class="container">
+
+    <!-- /.content-section-a -->
+
+{#    <div class="content-section-b">#}
+{##}
+{#        <div class="container">#}
+
+
+<!-- Beginning -->
+<div class="container">
+
+    <!-- Projects Row -->
+    {% for num, day in days %}
+
+        {% if num is divisibleby 2 %}
+            <div class="content-section-a">
+        {% else %}
+            <div class="content-section-b">
+        {% endif %}
+
+            {#  Row Title          #}
             <div class="row">
-                <div class="col-lg-5 col-sm-6">
-                    <hr class="section-heading-spacer">
-                    <div class="clearfix"></div>
-                    <h2 class="section-heading">Death to the Stock Photo:<br>Special Thanks</h2>
-                    <p class="lead">A special thanks to <a target="_blank" href="http://join.deathtothestockphoto.com/">Death to the Stock Photo</a> for providing the photographs that you see in this template. Visit their website to become a member.</p>
+                <div class="col-lg-12">
+                    <h1 class="page-header text-center">Day {{ num }}: (Title of Day Here) </h1>
                 </div>
-                <div class="col-lg-5 col-lg-offset-2 col-sm-6">
-                    <img class="img-responsive" src="static/img/ipad.png" alt="">
+            </div>
+
+            <div class="row">
+            {% for lesson in day %}
+                <div class="col-md-4 portfolio-item">
+                    <a href="#">
+                        <img class="img-responsive" src="static/img/{{ lesson.img }}" alt="">
+                    </a>
+                    <h3>
+                        <a href="lessons/{{ lesson.title }}"> {{ lesson.title }}</a>
+                    </h3>
+                    <p>{{ lesson.summary }}</p>
                 </div>
+            {% endfor %}
             </div>
 
         </div>
-        <!-- /.container -->
+    <!-- /.row -->
+    {% endfor %}
 
-    </div>
-    <!-- /.content-section-a -->
+    <hr>
+    <hr>
 
-    <div class="content-section-b">
 
-        <div class="container">
+</div>
+<!-- /.container -->
 
-            <div class="row">
-                <div class="col-lg-5 col-lg-offset-1 col-sm-push-6  col-sm-6">
-                    <hr class="section-heading-spacer">
-                    <div class="clearfix"></div>
-                    <h2 class="section-heading">3D Device Mockups<br>by PSDCovers</h2>
-                    <p class="lead">Turn your 2D designs into high quality, 3D product shots in seconds using free Photoshop actions by <a target="_blank" href="http://www.psdcovers.com/">PSDCovers</a>! Visit their website to download some of their awesome, free photoshop actions!</p>
-                </div>
-                <div class="col-lg-5 col-sm-pull-6  col-sm-6">
-                    <img class="img-responsive" src="static/img/dog.png" alt="">
-                </div>
-            </div>
 
         </div>
         <!-- /.container -->
@@ -92,26 +111,6 @@
     </div>
     <!-- /.content-section-b -->
 
-    <div class="content-section-a">
-
-        <div class="container">
-
-            <div class="row">
-                <div class="col-lg-5 col-sm-6">
-                    <hr class="section-heading-spacer">
-                    <div class="clearfix"></div>
-                    <h2 class="section-heading">Google Web Fonts and<br>Font Awesome Icons</h2>
-                    <p class="lead">This template features the 'Lato' font, part of the <a target="_blank" href="http://www.google.com/fonts">Google Web Font library</a>, as well as <a target="_blank" href="http://fontawesome.io">icons from Font Awesome</a>.</p>
-                </div>
-                <div class="col-lg-5 col-lg-offset-2 col-sm-6">
-                    <img class="img-responsive" src="static/img/phones.png" alt="">
-                </div>
-            </div>
-
-        </div>
-        <!-- /.container -->
-
-    </div>
     <!-- /.content-section-a -->
 
 	<a  name="contact"></a>
@@ -125,15 +124,11 @@
                 </div>
                 <div class="col-lg-6">
                     <ul class="list-inline banner-social-buttons">
+                        {% for name, url in [('CodeAcademy', "https://www.codecademy.com/"), ("Python Docs", "https://docs.python.org/3/"), ("CodeWars", "https://www.codewars.com/")] %}
                         <li>
-                            <a href="https://www.codecademy.com/" class="btn btn-default btn-lg"><i class="fa fa-twitter fa-fw"></i> <span class="network-name">CodeAcademy</span></a>
+                            <a href={{ url }} class="btn btn-default btn-lg"><i class="fa fa-twitter fa-fw"></i> <span class="network-name">{{ name }}</span></a>
                         </li>
-                        <li>
-                            <a href="https://docs.python.org/3/" class="btn btn-default btn-lg"><i class="fa fa-github fa-fw"></i> <span class="network-name">Python Docs</span></a>
-                        </li>
-                        <li>
-                            <a href="https://www.codewars.com/" class="btn btn-default btn-lg"><i class="fa fa-linkedin fa-fw"></i> <span class="network-name">codewars</span></a>
-                        </li>
+                        {% endfor %}
                     </ul>
                 </div>
             </div>
