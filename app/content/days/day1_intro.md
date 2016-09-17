@@ -1,2 +1,2 @@
-title: Introduction to Programming and the Terminal
+title: The Core Python Programming Language
 num: 0

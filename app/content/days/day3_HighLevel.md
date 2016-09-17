@@ -1,2 +1,2 @@
-title: Introduction to Multidimensional Data Collections and High-Level Data Visualization
+title: Python's High-Level Scientific Packages
 num: 2

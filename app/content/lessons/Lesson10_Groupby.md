@@ -1,7 +1,7 @@
 title: Aggregating, Binning, and Rolling Data
-day: 3
+day: 2
 num: 9
-img: smoothing.png
+icon: fa-filter
 summary: (Lesson Summary Here)
 
 

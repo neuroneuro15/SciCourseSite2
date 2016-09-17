@@ -1,7 +1,7 @@
 title: Pandas DataFrames
 day: 2
 num: 7
-img: dataframes.png
+icon: fa-table
 summary: Organize your N-Dimensional Data and increase your code readability with Pandas DataFrames
 
 

@@ -1,7 +1,7 @@
 title: The Terminal
 day: 0
 num: 1
-img: terminal.png
+icon: fa-terminal
 summary: The Terminal is a direct feed to your computer.
 
 # Scripts are Great

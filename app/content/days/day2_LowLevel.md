@@ -1,2 +1,2 @@
-title: Introduction to the Core Scientific Programming Packages
+title: Python's Low-Level Scientific Packages
 num: 1
