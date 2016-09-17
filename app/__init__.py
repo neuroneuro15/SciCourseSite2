@@ -13,6 +13,7 @@ FLATPAGES_AUTO_RELOAD = DEBUG
 FLATPAGES_EXTENSION = '.md'
 FLATPAGES_ROOT = 'content'
 LESSON_DIR = 'lessons'
+DAY_DIR = 'days'
 
 # Flask-Bootstrap
 Bootstrap(app)
