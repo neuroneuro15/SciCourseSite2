@@ -1,5 +1,6 @@
 title: Data Collection Objects and Iteration
-day: 0
+day: 1
+num: 3
 img: python_logo.png
 summary: Iteration is the key to saving you time and improving your reliability. Here we'll cover lists, tuples, and for-loops
 

@@ -1,4 +1,5 @@
-title: We'll cover the basics of the Python programming language.  Variable types, functions, conditional statements, the interpreter, and running scripts.
+title: Python Core Programming Language
 day: 0
-img: python_logo.png
-summary: Placeholder Text
+num: 2
+img: ipython.png
+summary: We'll cover the basics of the Python programming language.  Variable types, functions, conditional statements, the interpreter, and running scripts.

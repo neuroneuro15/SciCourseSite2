@@ -1,6 +1,7 @@
 title: Plotting with Matplotlib
 day: 1
-img: python_logo.png
+num: 5
+img: matplotlib.jpg
 summary: Matplotlib is a key Python package for performing data visualization.
 
 

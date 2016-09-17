@@ -9,7 +9,7 @@ from itertools import groupby
 def index():
     """Homepage"""
     lesson_pages = [p for p in flatpages if LESSON_DIR in p.path]
-    lesson_pages = sorted(lesson_pages, key=lambda p: p.path)  # sort pages by filename
+    lesson_pages = sorted(lesson_pages, key=lambda p: p.meta['num'])  # sort pages by filename
     days = groupby(lesson_pages,
                    lambda p: p.meta['day'])  # group pages into days [(0, [Page1, Page2]), (1, [Page3, Page4]),...]
 

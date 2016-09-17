@@ -1,6 +1,7 @@
 title: The Terminal
 day: 0
-img: python_logo.png
+num: 1
+img: terminal.png
 summary: The Terminal is a direct feed to your computer.
 
 # Scripts are Great
