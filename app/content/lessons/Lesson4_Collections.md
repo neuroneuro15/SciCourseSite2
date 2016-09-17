@@ -1,7 +1,7 @@
-title: Running Python Scripts
+title: Data Collection Objects and Iteration
 day: 0
 img: python_logo.png
-summary: We'll learn how to run Python scripts and packages
+summary: Iteration is the key to saving you time and improving your reliability. Here we'll cover lists, tuples, and for-loops
 
 # Scripts are Great
 
