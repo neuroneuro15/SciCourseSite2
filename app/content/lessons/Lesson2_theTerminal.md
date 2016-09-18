@@ -4,25 +4,22 @@ num: 1
 icon: fa-terminal
 summary: The Terminal is a direct feed to your computer.
 
-# Scripts are Great
-
-There are several reasons why we write scripts:
-
-  - They are easy to use
-  - They can be easily shared
-  - They save us time!
-
-# Markdown is useful
-
-Here is an example of a code block:
+## Lesson Goals
+  - Understand what the terminal is.
+  - Navigate the filesystem in the terminal (change/create/delete file and folders)
+  - Understand the syntax of commands in the terminal
 
 
-    import numpy as np
+## Sample Code
 
-    x = 3
-    y = np.arange(0, 10, 2)
-    sinx = x * np.sin(y)
-    print(sinx)
+```bash
+    cd impdir
+```
 
+```bash
+    mkdir Workshop
+```
 
-Looks good, doesn't it?  **Doesn't it?!**
+```bash
+    ls -a ../Documents
+```
