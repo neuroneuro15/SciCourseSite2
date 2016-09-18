@@ -20,12 +20,6 @@ def index():
     return render_template('landing.html', days=days, daydata=day_pages)
 
 
-@app.route('/lessons/<title>')
-def lesson(title):
-    """Lesson pages"""
-    page = [p for p in flatpages if title in p.meta['title']][0]  # match title in FlatPages title tag list
-    return render_template('lesson.html', page=page)
-
 @app.route('/final_project')
 def final_project():
     page = flatpages.get('final_project')
