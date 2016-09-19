@@ -5,21 +5,26 @@ icon: fa-terminal
 summary: The Terminal is a direct feed to your computer.
 
 ## Lesson Goals
+  - Appreciate the Pros and Cons of GUIs vs Text-based computer interfaces.
   - Understand what the terminal is.
-  - Navigate the filesystem in the terminal (change/create/delete file and folders)
+  - Become comfortable navigating the filesystem in the terminal (change/create/delete file and folders)
   - Understand the syntax of commands in the terminal
 
 
 ## Sample Code
 
-```bash
+```
     cd impdir
 ```
 
-```bash
+```
     mkdir Workshop
 ```
 
-```bash
+```
     ls -a ../Documents
 ```
+
+## Quote
+
+"We shape our tools, and thereafter our tools shape us." (Marshall McLuhan)
