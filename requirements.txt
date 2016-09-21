@@ -1,5 +1,5 @@
 flask
 flask-bootstrap
 flask-nav
-flask-sqlalchemy
 Flask-FlatPages
+Frozen-Flask
