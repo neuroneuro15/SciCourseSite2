@@ -83,15 +83,23 @@
     </div>
     <!-- /.intro-header -->
 
+
     <section class="bg-primary" id="about">
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 text-center">
                     <h2 class="section-heading">Before the Workshop: Install Required Software</h2>
                     <hr class="light">
-                    <a href="https://www.continuum.io/downloads" class="page-scroll btn-lg btn-default btn-xl sr-button">Anaconda Python 3 Distribution</a>
-                    <a href="https://atom.io/" class="page-scroll btn-lg btn-default btn-xl sr-button">Atom Text Editor</a>
-                    <a href="https://cygwin.com/install.html" class="page-scroll btn-lg btn-default btn-xl sr-button">Cygwin (Windows Only)</a>
+                    <ul class"list-inline">
+                        {% for name, url in [("Anaconda Python 3 Distribution", "https://www.continuum.io/downloads"),
+                                             ("Atom Text Editor", "https://atom.io/"),
+                                             ("Cygwin (Windows Only)", "https://cygwin.com/install.html"),
+                                             ("Git", "https://www.git.com")]%}
+                            <li>
+                                <a href="{{ url }}" class="page-scroll btn-lg btn-default btn-xl sr-button">{{ name }}</a>
+                            </li>
+                        {% endfor %}
+                    </ul>
                     <hr class="light">
                 </div>
             </div>
@@ -172,6 +180,14 @@
                                             <h4 class="modal-title">{{ lesson.title }}</h4>
                                         </div>
                                         <div class="modal-body">
+                                            <h2> Exercise Files </h2>
+                                            <ul>
+                                            {% for filename in lesson.exercises %}
+                                                <li><a href="/file/{{ filename }}">{{ filename }} </a></li>
+
+                                            {% endfor %}
+                                            </ul>
+                                            <hr>
                                             {{ lesson.html|safe }}
                                         </div>
                                         <div class="modal-footer">

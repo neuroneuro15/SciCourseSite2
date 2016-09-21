@@ -3,7 +3,8 @@ day: 0
 num: 2
 icon: fa-desktop
 summary: We'll cover the basics of the Python programming language.  Variable types, functions, conditional statements, the interpreter, and running scripts.
-
+exercises:
+  - testfile.csv
 
 ## Lesson Goals
   - Become comfortable working in the Python console.

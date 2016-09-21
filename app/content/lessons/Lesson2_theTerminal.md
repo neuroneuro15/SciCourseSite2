@@ -3,6 +3,8 @@ day: 0
 num: 1
 icon: fa-terminal
 summary: The Terminal is a direct feed to your computer.
+exercises:
+  - testfile.csv
 
 ## Lesson Goals
   - Appreciate the Pros and Cons of GUIs vs Text-based computer interfaces.
@@ -26,5 +28,3 @@ summary: The Terminal is a direct feed to your computer.
 ```
 
 ## Quote
-
-"We shape our tools, and thereafter our tools shape us." (Marshall McLuhan)

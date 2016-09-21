@@ -3,7 +3,8 @@ day: 1
 num: 4
 icon: fa-list-ol
 summary: NumPy is the workhorse of the scientific Python stack.  We'll use arrays to speed up analysis.
-
+exercises:
+  - testfile.csv
 
 # Lesson Goals
 
