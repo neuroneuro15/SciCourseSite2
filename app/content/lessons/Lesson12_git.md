@@ -1,7 +1,7 @@
 title: Version Control with Git
 day: 3
 num: 13
-icon: fa-files-o
+icon: fa-git
 summary: Learn how to use Git to package, backup, keep drafts of, and share your project.
 exercises:
   - testfile.csv

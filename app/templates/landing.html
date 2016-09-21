@@ -8,6 +8,7 @@
 
     <!-- Custom Fonts -->
     <link href="static/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="static/octicons-4.3.0/index.scss" rel="stylesheet" type="text/scss">
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
 
 
@@ -70,8 +71,8 @@
                         <h1>MPI Programming Workshop</h1>
                         <h2>"Introduction to Scientific Programming with Python"</h2>
                         <hr class="intro-divider">
-                        <h3>Date: (Insert Date Here)</h3>
-                        <h3>Address: MPI Biochemistry Campus, Room ###, Address, Planegg</h3>
+                        <h3>4 Days: November 7th - 10th, 2016</h3>
+                        <h3>Address: MPI Neurobiology Campus, Room NQ105, Planegg, Germany</h3>
 
                     </div>
                 </div>
@@ -122,7 +123,7 @@
             <div class="row">
                 {% for name, text in [('Accessible', 'No Programming Experience Required.'),
                                             ('Engaging', 'Learn Free, Open-Source Data Analysis Tools.'),
-                                            ('Empowering', 'Learn Strategies For Accessing, Organizing, and Visualizing Your Data to Give You New Insights into Your Experiments.'),
+                                            ('Empowering', 'Leave with new Tools and Strategies for your Data Analysis'),
                                             ('Fun', 'Hands-On Learning Alongside Your Labmates')] %}
                     <div class="col-lg-3 col-md-6 text-center">
                         <div class="service-box">
@@ -162,9 +163,16 @@
                     <div class="row">
                         {% for lesson in day %}
                             <div class="col-md-4 portfolio-item text-center">
+                                {% if links_active %}
                                 <button type="button" class="btn btn-info" data-toggle="modal" data-target="#modal_lesson_{{ lesson.num }}" style="background-color: transparent; border-color: transparent">
+                                {% endif %}
+
+
                                     <i class="fa fa-4x {{ lesson.icon }} text-primary sr-icons" ></i>
+
+                                {% if links_active %}
                                 </button>
+                                {% endif %}
                                 <h3> {{ lesson.title }} </h3>
                                 <p>{{ lesson.summary }}</p>
 
@@ -172,6 +180,7 @@
 
 
                             <!-- Modal -->
+                            {% if links_active %}
                             <div id="modal_lesson_{{ lesson.num }}" class="modal fade" role="dialog">
                                 <div class="modal-dialog">
 
@@ -199,6 +208,7 @@
 
                                 </div>
                             </div>
+                            {% endif %}
 
                         {% endfor %}
 

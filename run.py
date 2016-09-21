@@ -1,4 +1,4 @@
-from app import app, flatpages, LESSON_DIR, DAY_DIR, pygments_style_defs
+from app import app, flatpages, LESSON_DIR, DAY_DIR, pygments_style_defs, LINKS_ACTIVE
 from flask import render_template, make_response
 from itertools import groupby
 
@@ -17,7 +17,7 @@ def index():
     day_pages = sorted(day_pages, key=lambda p: p.meta['num'])
 
 
-    return render_template('landing.html', days=days, daydata=day_pages)
+    return render_template('landing.html', days=days, daydata=day_pages, links_active=LINKS_ACTIVE)
 
 
 @app.route('/final_project')

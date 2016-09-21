@@ -5,7 +5,7 @@ from flask_flatpages import FlatPages, pygmented_markdown, pygments_style_defs
 app = Flask(__name__)
 
 DEBUG = True
-
+LINKS_ACTIVE = False
 
 # Flask-FlatPages
 flatpages = FlatPages(app)
