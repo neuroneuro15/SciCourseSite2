@@ -2,7 +2,7 @@ title: Python Core Programming Language
 day: 0
 num: 2
 icon: fa-desktop
-summary: We'll cover the basics of the Python programming language.  Variable types, functions, conditional statements, the interpreter, and running scripts.
+summary: We'll cover the basics of the Python programming language.  Variable types, functions, and conditional statements.
 exercises:
   - testfile.csv
 
@@ -11,7 +11,7 @@ exercises:
   - Understand what a variable is, and the different core data types: int, float, char, str, bool
   - Understand how and when to use if-else statements and while loops
   - Understand how to use functions, and how to access and read the help documentation for functions
-  - Understand how to write and run a Python script.
+  - Understand how to write a Python script.
 
 
 ## Sample Code

@@ -2,7 +2,7 @@ title: Matrices and Image Analysis
 day: 1
 num: 6
 icon: fa-th
-summary: Arrays can be two-dimensional, too!  We'll cover 2D matrix manipulation and 3D Image Analysis with scikit-image!
+summary: Data is often multi-dimensional; we'll cover 2D matrix manipulation and take a looks at image analysis with scikit-image.
 exercises:
   - testfile.csv
 

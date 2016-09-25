@@ -8,7 +8,6 @@ Python Workshop
 {% block styles %}
     {{ super() }}
     <link href="{{ url_for('static', filename='css/landing-page.css') }}" rel="stylesheet">
-    <link href="{{ url_for('static', filename="css/3-col-portfolio.css") }}" rel="stylesheet">
     <link href="{{ url_for('static', filename="css/bootstrap.min.css") }}" rel="stylesheet">
     <link rel="stylesheet" href="{{ url_for('pygments_css') }}">
     <!-- Custom Fonts -->
@@ -52,9 +51,6 @@ Python Workshop
                         <a href="#day{{ num }}">Day {{ num }}</a>
                     </li>
                     {% endfor %}
-                    <li>
-                        <a href="/final_project">Final Project</a>
-                    </li>
 
                 </ul>
             </div>
@@ -103,7 +99,6 @@ Python Workshop
                     <ul class="list-inline">
                         {% for name, url in [("Anaconda Python 3 Distribution", "https://www.continuum.io/downloads"),
                                              ("Atom Text Editor", "https://atom.io/"),
-                                             ("Cygwin (Windows Only)", "https://cygwin.com/install.html"),
                                              ("Git", "https://www.git.com")]%}
                             <li>
                                 <a href="{{ url }}" class="btn btn-default btn-lg">{{ name }}</a>

@@ -1,8 +1,8 @@
-title: The Terminal
+title: Filesystems and The Terminal
 day: 0
 num: 1
 icon: fa-terminal
-summary: The Terminal is a direct feed to your computer.
+summary: Running programs, moving files, customizing your computer-- Everything can happen in the terminal.  No mouse required!
 exercises:
   - testfile.csv
 
@@ -11,6 +11,7 @@ exercises:
   - Understand what the terminal is.
   - Become comfortable navigating the filesystem in the terminal (change/create/delete file and folders)
   - Understand the syntax of commands in the terminal
+  - Be able to run Python scripts in the terminal.
 
 
 ## Sample Code
@@ -26,5 +27,10 @@ exercises:
 ```
     ls -a ../Documents
 ```
+
+```
+   python myScript.py
+```
+
 
 ## Quote
