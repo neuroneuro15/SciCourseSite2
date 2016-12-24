@@ -23,6 +23,11 @@ def workshop():
 
 
 
+@app.route('/resources')
+def further_resources():
+    page = flatpages.get_or_404('online_resources')
+    return render_template('learning_resources.html', page=page)
+
 
 @app.route('/pygments.css')
 def pygments_css():

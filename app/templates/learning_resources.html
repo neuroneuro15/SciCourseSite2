@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+
+{% block body %}
+    {{ super() }}
+
+    <section>
+        <div class="container">
+            {{ page.html|safe }}
+        </div>
+    </section>
+
+{% endblock %}
