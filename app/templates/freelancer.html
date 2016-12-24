@@ -4,33 +4,12 @@
 SciPy Learning Space
 {% endblock %}
 
-{% block styles %}
-    {{ super() }}
-
-    <!-- Theme CSS -->
-    <link href="{{ url_for('static', filename='css/freelancer.min.css') }}" rel="stylesheet">
-
-    <!-- Custom Fonts -->
-    <link href="{{ url_for('static', filename='vendor/font-awesome/css/font-awesome.min.css') }}" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
-
-{% endblock %}
-
 
 {% block scripts %}
     {{ super() }}
-
-    <!-- Plugin JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
-
     <!-- Contact Form JavaScript -->
     <script src="{{ url_for('static', filename='js/jqBootstrapValidation.js')}}"></script>
     <script src="{{ url_for('static', filename='js/contact_me.js')}}"></script>
-
-    <!-- Theme JavaScript -->
-    <script src="{{ url_for('static', filename='js/freelancer.min.js')}}"></script>
-
 {% endblock %}
 
 
@@ -50,14 +29,39 @@ SciPy Learning Space
                     <div class="col-lg-12">
                         <img class="img-responsive" src="{{ url_for('static', filename='img/profile.png') }}" alt="">
                         <div class="intro-text">
-                            <span class="name">Start Bootstrap</span>
+                            <span class="name">SciPy-Learn</span>
                             <hr class="star-light">
-                            <span class="skills">Web Developer - Graphic Artist - User Experience Designer</span>
+                            <span class="skills">Programming Workshops for Scientists</span>
                         </div>
                     </div>
                 </div>
             </div>
         </header>
+
+        <section id="goals">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 text-center">
+                        <h1 class="section-heading">Workshop Goals</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    {% for name, text in [('Accessible', 'No Programming Experience Required.'),
+                                                ('Engaging', 'Learn Free, Open-Source Data Analysis Tools.'),
+                                                ('Empowering', 'Leave with new Tools and Strategies for your Data Analysis'),
+                                                ('Fun', 'Hands-On Learning Alongside Your Labmates')] %}
+                        <div class="col-lg-3 col-md-6 text-center">
+                            <div class="service-box">
+                                <h3>{{ name }}</h3>
+                                <p class="text-muted">{{ text }}</p>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </section>
 
         <!-- Portfolio Grid Section -->
         <section id="portfolio">
