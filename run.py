@@ -3,9 +3,12 @@ from flask import render_template, make_response
 from itertools import groupby
 
 
-
 @app.route('/')
 def index():
+    return render_template('freelancer.html')
+
+@app.route('/workshop')
+def workshop():
     """Homepage"""
     lesson_pages = [p for p in flatpages if LESSON_DIR in p.path]
     lesson_pages = sorted(lesson_pages, key=lambda p: p.meta['num'])  # sort pages by filename
