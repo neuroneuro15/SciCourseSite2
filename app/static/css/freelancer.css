@@ -181,10 +181,7 @@ header .intro-text .skills {
 section {
   padding: 100px 0;
 }
-section h2 {
-  margin: 0;
-  font-size: 3em;
-}
+
 section.success {
   background: #18BC9C;
   color: white;
@@ -454,10 +451,7 @@ fieldset[disabled] .btn-success.active {
   padding: 100px 0;
   text-align: center;
 }
-.portfolio-modal .modal-content h2 {
-  margin: 0;
-  font-size: 3em;
-}
+
 .portfolio-modal .modal-content img {
   margin-bottom: 30px;
 }
@@ -502,4 +496,27 @@ fieldset[disabled] .btn-success.active {
 .portfolio-modal .modal-backdrop {
   opacity: 0;
   display: none;
+}
+
+
+/*Nick-Added*/
+.content-section-a {
+    padding: 50px 0;
+    background-color: #f8f8f8;
+}
+
+.content-section-b {
+    padding: 50px 0;
+    border-top: 1px solid #e7e7e7;
+    border-bottom: 1px solid #e7e7e7;
+}
+
+.section-heading {
+    margin-bottom: 30px;
+}
+
+.section-heading-spacer {
+    float: left;
+    width: 200px;
+    border-top: 3px solid #e7e7e7;
 }
