@@ -43,14 +43,17 @@
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
-                    <li class="hidden">
-                        <a href="#page-top"></a>
-                    </li>
-                    <li class="page-scroll">
-                        <a href="/">Home</a>
-                    </li>
-                    <li class="page-scroll">
-                        <a href="/workshop/Intro_Workshop">Workshop</a>
+                    <li class="hidden"> <a href="#page-top"></a></li>
+                    <li> <a href="/">Home</a> </li>
+                    <li>
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true">
+                            Workshops <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu navbar-custom">
+                            <li> <a href="/workshop/Intro_Workshop">Intro. to Scientific Programming</a></li>
+                            <li> <a href="/workshop/Matlab2Python">Python for Matlab Programmers</a></li>
+                            <li> <a href="/workshop/R2Python">Python for R Programmers</a></li>
+                        </ul>
                     </li>
                     <li class="page-scroll">
                         <a href="/resources">Resources</a>
