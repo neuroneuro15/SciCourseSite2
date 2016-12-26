@@ -63,77 +63,55 @@ SciPy Learning Space
             </div>
         </section>
 
-        <!-- Portfolio Grid Section -->
-        <section id="portfolio">
+        <!-- Workshop Description -->
+        <section id="workshops">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-12 text-center">
-                        <h2>Portfolio</h2>
-                        <hr class="star-primary">
+                    <div class="text-center">
+                        <h1 class="section-heading">Workshops</h1>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col-sm-4 portfolio-item">
-                        <a href="#portfolioModal1" class="portfolio-link" data-toggle="modal">
-                            <div class="caption">
-                                <div class="caption-content">
-                                    <i class="fa fa-search-plus fa-3x"></i>
-                                </div>
-                            </div>
-                            <img src="{{ url_for('static', filename='img/portfolio/cabin.png')}}" class="img-responsive" alt="">
-                        </a>
+                {% for shortname, workshop in workshops.items() %}
+                    <hr>
+                    <div class="row">
+                        <div class="col-lg-12 text-center">
+                            <h2> {{ workshop.title }} </h2>
+                        </div>
                     </div>
-                    <div class="col-sm-4 portfolio-item">
-                        <a href="#portfolioModal2" class="portfolio-link" data-toggle="modal">
-                            <div class="caption">
-                                <div class="caption-content">
-                                    <i class="fa fa-search-plus fa-3x"></i>
-                                </div>
-                            </div>
-                            <img src="{{ url_for('static', filename='img/portfolio/cake.png')}}" class="img-responsive" alt="">
-                        </a>
+                    <div class="row">
+                        <div class="text-center">
+                            {{ workshop.summary }}
+                        </div>
                     </div>
-                    <div class="col-sm-4 portfolio-item">
-                        <a href="#portfolioModal3" class="portfolio-link" data-toggle="modal">
-                            <div class="caption">
-                                <div class="caption-content">
-                                    <i class="fa fa-search-plus fa-3x"></i>
+                    <div class="row">
+                        <div class="col-lg-4 text-center">
+                                <div class="service-box">
+                                    <p class="text-muted">Workshop Duration</p>
+                                    <h4>{{ (workshop.plan|length * 7.5)|int }} Hours</h4>
+
                                 </div>
-                            </div>
-                            <img src="{{ url_for('static', filename='img/portfolio/circus.png')}}" class="img-responsive" alt="">
-                        </a>
-                    </div>
-                    <div class="col-sm-4 portfolio-item">
-                        <a href="#portfolioModal4" class="portfolio-link" data-toggle="modal">
-                            <div class="caption">
-                                <div class="caption-content">
-                                    <i class="fa fa-search-plus fa-3x"></i>
+                        </div>
+                        <div class="col-lg-4 text-center">
+                                <div class="service-box">
+                                    <p class="text-muted">Workshop Focus</p>
+                                    <h4> {{ workshop.topic }} </h4>
                                 </div>
-                            </div>
-                            <img src="{{ url_for('static', filename='img/portfolio/game.png')}}" class="img-responsive" alt="">
-                        </a>
-                    </div>
-                    <div class="col-sm-4 portfolio-item">
-                        <a href="#portfolioModal5" class="portfolio-link" data-toggle="modal">
-                            <div class="caption">
-                                <div class="caption-content">
-                                    <i class="fa fa-search-plus fa-3x"></i>
+                        </div>
+                        <div class="col-lg-4 text-center">
+                                <div class="service-box">
+                                    <p class="text-muted">Level</p>
+                                    <h4>{{ workshop.level }}</h4>
                                 </div>
-                            </div>
-                            <img src="{{ url_for('static', filename='img/portfolio/safe.png')}}" class="img-responsive" alt="">
-                        </a>
+                        </div>
                     </div>
-                    <div class="col-sm-4 portfolio-item">
-                        <a href="#portfolioModal6" class="portfolio-link" data-toggle="modal">
-                            <div class="caption">
-                                <div class="caption-content">
-                                    <i class="fa fa-search-plus fa-3x"></i>
-                                </div>
-                            </div>
-                            <img src="{{ url_for('static', filename='img/portfolio/submarine.png')}}" class="img-responsive" alt="">
-                        </a>
+                    <div class="row">
+                        <div class="col-lg-8 col-lg-offset-2 text-center">
+                            <a href="/workshop/{{ shortname }}" class="btn btn-lg">
+                                Workshop Details
+                            </a>
+                        </div>
                     </div>
-                </div>
+                {% endfor %}
             </div>
         </section>
 
@@ -224,33 +202,21 @@ SciPy Learning Space
                     <div class="row">
                         <div class="footer-col col-md-4">
                             <h3>Location</h3>
-                            <p>3481 Melrose Place
-                                <br>Beverly Hills, CA 90210</p>
+                            <p>Munich, Germany</p>
                         </div>
                         <div class="footer-col col-md-4">
                             <h3>Around the Web</h3>
                             <ul class="list-inline">
-                                <li>
-                                    <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-facebook"></i></a>
-                                </li>
-                                <li>
-                                    <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-google-plus"></i></a>
-                                </li>
-                                <li>
-                                    <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-twitter"></i></a>
-                                </li>
-                                <li>
-                                    <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-linkedin"></i></a>
-                                </li>
-                                <li>
-                                    <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-dribbble"></i></a>
-                                </li>
+                                {% for (icon, address) in [('facebook', 'https://www.facebook.com'), ('linkedin', 'https://www.linkedin.com')] %}
+                                    <li>
+                                        <a href="{{ address }}" class="btn-social btn-outline"><i class="fa fa-fw fa-{{ icon }}"></i></a>
+                                    </li>
+                                {% endfor %}
                             </ul>
                         </div>
-                        <div class="footer-col col-md-4">
-                            <h3>About Freelancer</h3>
-                            <p>Freelance is a free to use, open source Bootstrap theme created by <a href="http://startbootstrap.com">Start Bootstrap</a>.</p>
-                        </div>
+{#                        <div class="footer-col col-md-4">#}
+{#                            <h3>Made with Python, Flask, and Bootstrap</h3>#}
+{#                        </div>#}
                     </div>
                 </div>
             </div>
@@ -258,7 +224,7 @@ SciPy Learning Space
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-12">
-                            Copyright &copy; Your Website 2016
+                            Copyright &copy; SciPy-Learn 2016
                         </div>
                     </div>
                 </div>

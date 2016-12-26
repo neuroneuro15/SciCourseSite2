@@ -1,5 +1,7 @@
 Intro_Workshop:
     title: Introduction to Scientific Programming with Python
+    level: 1
+    topic: Scientific Programming
     summary: >
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
         labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
@@ -33,6 +35,8 @@ Intro_Workshop:
               - git
 Matlab2Python:
     title: Python for Matlab Programmers
+    level: 1
+    topic: Scientific Programming
     summary: >
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
         labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
@@ -54,6 +58,8 @@ Matlab2Python:
               - functions
 R2Python:
     title: Python for R Programmers
+    level: 1
+    topic: Scientific Programming
     summary: >
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
         labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
