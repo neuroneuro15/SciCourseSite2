@@ -4,7 +4,9 @@ from flask import render_template, make_response
 
 @app.route('/')
 def index():
-    return render_template('index.html')
+    page = flatpages.get_or_404('workshops')
+    workshops = page.meta
+    return render_template('index.html', workshops=workshops)
 
 @app.route('/workshop/<name>')
 def workshop_page(name):
