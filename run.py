@@ -1,6 +1,5 @@
-from app import app, flatpages, LESSON_DIR, DAY_DIR, pygments_style_defs, LINKS_ACTIVE, freezer
+from app import app, flatpages, pygments_style_defs, LINKS_ACTIVE, freezer
 from flask import render_template, make_response
-from itertools import groupby
 
 
 @app.route('/')
@@ -8,18 +7,17 @@ def index():
     return render_template('freelancer.html')
 
 @app.route('/workshop')
-def workshop():
-    """Homepage"""
-    lesson_pages = [p for p in flatpages if LESSON_DIR in p.path]
-    lesson_pages = sorted(lesson_pages, key=lambda p: p.meta['num'])  # sort pages by filename
-    days = groupby(lesson_pages,
-                   lambda p: p.meta['day'])  # group pages into days [(0, [Page1, Page2]), (1, [Page3, Page4]),...]
+def workshop_page():
+    page = flatpages.get('workshops')
+    workshop = page.meta
 
-    day_pages = [p for p in flatpages if DAY_DIR in p.path]
-    day_pages = sorted(day_pages, key=lambda p: p.meta['num'])
+    day_pages = []
+    for idx, day in enumerate(workshop['plan']):
+        lessons = [flatpages.get('lessons/{}'.format(lesson)) for lesson in day]
+        day_pages.append((idx, lessons))
 
+    return render_template('workshop_summary.html', daydata=day_pages, links_active=LINKS_ACTIVE)
 
-    return render_template('landing.html', days=days, daydata=day_pages, links_active=LINKS_ACTIVE)
 
 
 
