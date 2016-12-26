@@ -4,7 +4,7 @@ from flask import render_template, make_response
 
 @app.route('/')
 def index():
-    return render_template('freelancer.html')
+    return render_template('index.html')
 
 @app.route('/workshop/<name>')
 def workshop_page(name):
