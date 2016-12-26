@@ -114,3 +114,80 @@ IntermediatePython:
               - deployment
               - testing
               - gui
+DataCollection:
+    title: Data Collection and Online Analysis with Python
+    level: 2
+    topic: Data Collection
+    summary: >
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+        nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit
+        esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+        sunt in culpa qui officia deserunt mollit anim id est laborum.
+    plan:
+        - title: Scientific Devices and Network Communication
+          summary: daffafafa
+          lessons:
+              - CorePython2
+              - micropython
+              - sockets
+        - title: Web Dashboards
+          summary: dfaafaf
+          lessons:
+              - webscraping
+              - bokeh
+              - flask
+BootCamp:
+    title: Python Bootcamp Scientific Programming and Data Collection
+    level: 1
+    topic: Scientific Programming
+    summary: >
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+        nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit
+        esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+        sunt in culpa qui officia deserunt mollit anim id est laborum.
+    plan:
+        - title: Introduction to Programming
+          summary: aaaa
+          lessons:
+              - theTerminal
+              - CorePython
+              - Collections
+        - title: Analysis with NumPy Arrays and Matplotlib Figures
+          summary: bbbb
+          lessons:
+              - Numpy
+              - Matplotlib
+              - ImageAnalysis
+        - title: High-Level Data Structures and Plotting Libraries
+          summary: cccc
+          lessons:
+              - Pandas
+              - Plotting2
+              - dataformats
+        - title: Data Modeling
+          summary: dddddd
+          lessons:
+              - pandas2
+              - statsmodels
+              - cli
+        - title: Code Organization, Programming Tools, and Good Practices
+          summary: dddd
+          lessons:
+              - functions
+              - Jupyter
+              - git
+        - title: Scientific Devices and Network Communication
+          summary: daffafafa
+          lessons:
+              - CorePython2
+              - micropython
+              - sockets
+        - title: Web Dashboards
+          summary: dfaafaf
+          lessons:
+              - webscraping
+              - bokeh
+              - flask
+
