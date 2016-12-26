@@ -26,16 +26,5 @@ def pygments_css():
     return pygments_style_defs('tango'), 200, {'Content-Type': 'text/css'}
 
 
-@app.route('/file/<filename>')
-def get_file(filename):
-
-    with app.open_resource('content/exercises/{}'.format(filename)) as f:
-        contents = f.read()
-
-    response = make_response(contents)
-    response.headers["Content-Disposition"] = "attachment; filename={}".format(filename)
-    return response
-
 if __name__ == '__main__':
-
     app.run(debug=True)
