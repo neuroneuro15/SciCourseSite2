@@ -1,5 +1,4 @@
 title: High-Level Data Visualization
-day: 2
 num: 8
 icon: fa-area-chart
 summary: Building a nice chart can be complicated! We'll learn how to create beautiful Matplotlib charts more quickly with Pandas and Seaborn.
