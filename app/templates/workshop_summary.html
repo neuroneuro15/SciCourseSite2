@@ -66,14 +66,6 @@ Python 4-Day Workshop
                                             <h4 class="modal-title">{{ lesson.title }}</h4>
                                         </div>
                                         <div class="modal-body">
-                                            <h2> Exercise Files </h2>
-                                            <ul>
-                                            {% for filename in lesson.exercises %}
-                                                <li><a href="/file/{{ filename }}">{{ filename }} </a></li>
-
-                                            {% endfor %}
-                                            </ul>
-                                            <hr>
                                             {{ lesson.html|safe }}
                                         </div>
                                         <div class="modal-footer">
