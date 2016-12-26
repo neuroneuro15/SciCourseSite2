@@ -1,5 +1,4 @@
 title: Pandas DataFrames
-num: 7
 icon: fa-table
 summary: Label and organize your N-Dimensional Data and increase your code readability with Pandas DataFrames
 

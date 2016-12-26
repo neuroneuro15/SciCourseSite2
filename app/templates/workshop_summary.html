@@ -46,7 +46,7 @@ Python 4-Day Workshop
                         {% for lesson in day %}
                             <!-- Lesson Title and Summary-->
                             <div class="col-md-4 portfolio-item text-center">
-                                <button type="button" class="btn btn-info" data-toggle="modal" data-target="#modal_lesson_{{ lesson.num }}" style="background-color: transparent; border-color: transparent">
+                                <button type="button" class="btn btn-info" data-toggle="modal" data-target="#modal_lesson_{{ lesson.path[8:] }}" style="background-color: transparent; border-color: transparent">
                                     <i class="fa fa-4x {{ lesson.icon }} text-primary sr-icons" ></i>
                                 </button>
                                 <h3> {{ lesson.title }} </h3>
@@ -56,7 +56,7 @@ Python 4-Day Workshop
 
 
                             <!-- Modal -->
-                            <div id="modal_lesson_{{ lesson.num }}" class="modal fade" role="dialog">
+                            <div id="modal_lesson_{{ lesson.path[8:] }}" class="modal fade" role="dialog">
                                 <div class="modal-dialog">
 
                                     <!-- Modal content-->

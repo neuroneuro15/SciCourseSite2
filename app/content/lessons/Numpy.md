@@ -1,5 +1,4 @@
 title: NumPy (Numerical Python) Arrays
-num: 4
 icon: fa-list-ol
 summary: NumPy is the workhorse of the scientific Python stack.  We'll use arrays to speed up analysis and write simpler code.
 

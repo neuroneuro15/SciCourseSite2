@@ -1,5 +1,4 @@
 title: Python Core Programming Language
-num: 2
 icon: fa-desktop
 summary: We'll cover the basics of the Python programming language.  Variable types, functions, and conditional statements.
 

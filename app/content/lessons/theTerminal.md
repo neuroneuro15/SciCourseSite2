@@ -1,5 +1,4 @@
 title: Filesystems and The Terminal
-num: 1
 icon: fa-terminal
 summary: Running programs, moving files, customizing your computer-- Everything can happen in the terminal.  No mouse required!
 

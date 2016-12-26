@@ -1,5 +1,4 @@
 title: Data Collection Objects and Iteration
-num: 3
 icon: fa-refresh
 summary: Iteration is the key to saving you time and improving your reliability. Here we'll cover strings, lists, tuples, and for-loops
 
