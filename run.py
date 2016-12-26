@@ -8,10 +8,12 @@ def index():
 
 @app.route('/workshop/<name>')
 def workshop_page(name):
-    page = flatpages.get('workshops')
+    page = flatpages.get_or_404('workshops')
     workshop = page.meta[name]
-    day_pages = [[flatpages.get('lessons/{}'.format(lesson)) for lesson in day['lessons']] for day in workshop['plan']]
-    return render_template('workshop_summary.html', workshop=workshop, daydata=day_pages)
+    for day in workshop['plan']:
+        day['lessons'] = [flatpages.get('lessons/{}'.format(lesson)) for lesson in day['lessons']]
+
+    return render_template('workshop_summary.html', workshop=workshop)#, daydata=day_pages)
 
 
 @app.route('/resources')

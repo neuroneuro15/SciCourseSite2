@@ -32,18 +32,19 @@ Python 4-Day Workshop
 
 
             <!-- Projects Row -->
-            {% for day in daydata %}
+            {% for day in workshop.plan %}
                 <div class="content-section-b" id="day{{ loop.index0 }}">
 
                     {#  Row Title          #}
                     <div class="row">
                         <div class="col-lg-12">
-                            <h2 class="section-heading text-center">Day {{ loop.index }}</h2>
+                            <h2 class="section-heading text-center">Day {{ loop.index }}: {{ day.title }}</h2>
+                            <h2 class="section-heading text-center"><small>{{ day.summary }}</small></h2>
                         </div>
                     </div>
 
                     <div class="row">
-                        {% for lesson in day %}
+                        {% for lesson in day.lessons %}
                             <!-- Lesson Title and Summary-->
                             <div class="col-md-4 portfolio-item text-center">
                                 <button type="button" class="btn btn-info" data-toggle="modal" data-target="#modal_lesson_{{ lesson.path[8:] }}" style="background-color: transparent; border-color: transparent">
