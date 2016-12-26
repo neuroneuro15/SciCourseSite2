@@ -16,7 +16,7 @@ def workshop_page():
         lessons = [flatpages.get('lessons/{}'.format(lesson)) for lesson in day]
         day_pages.append((idx, lessons))
 
-    return render_template('workshop_summary.html', daydata=day_pages, links_active=LINKS_ACTIVE)
+    return render_template('workshop_summary.html', workshop=page, daydata=day_pages, links_active=LINKS_ACTIVE)
 
 
 

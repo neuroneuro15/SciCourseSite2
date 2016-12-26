@@ -8,23 +8,14 @@ Python 4-Day Workshop
 {% block body %}
     {{ super() }}
 
-    <!-- Header -->
-    <a name="about"></a>
-
     <header>
         <div class="container">
             <div class="page-header">
-                <h1> <small>4-Day Workshop</small></h1>
-                <h1>Intro. to Scientific Programming with Python</h1>
+                <h1> <small> {{ daydata|length }}-Day Workshop</small></h1>
+                <h1> {{ workshop.title }}</h1>
             </div>
             <div>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                    labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                    nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit
-                    esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-                    sunt in culpa qui officia deserunt mollit anim id est laborum.
-                </p>
+                <p> {{ workshop.summary }} </p>
             </div>
         </div>
     </header>
@@ -42,9 +33,6 @@ Python 4-Day Workshop
 
             <!-- Projects Row -->
             {% for num, day in daydata %}
-
-
-
                 <div class="content-section-b" id="day{{ num }}">
 
                     {#  Row Title          #}
