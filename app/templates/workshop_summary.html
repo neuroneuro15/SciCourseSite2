@@ -32,29 +32,23 @@ Python 4-Day Workshop
 
 
             <!-- Projects Row -->
-            {% for num, day in daydata %}
-                <div class="content-section-b" id="day{{ num }}">
+            {% for day in daydata %}
+                <div class="content-section-b" id="day{{ loop.index0 }}">
 
                     {#  Row Title          #}
                     <div class="row">
                         <div class="col-lg-12">
-                            <h2 class="section-heading text-center">Day {{ num + 1 }}</h2>
+                            <h2 class="section-heading text-center">Day {{ loop.index }}</h2>
                         </div>
                     </div>
 
                     <div class="row">
                         {% for lesson in day %}
+                            <!-- Lesson Title and Summary-->
                             <div class="col-md-4 portfolio-item text-center">
-                                {% if links_active %}
                                 <button type="button" class="btn btn-info" data-toggle="modal" data-target="#modal_lesson_{{ lesson.num }}" style="background-color: transparent; border-color: transparent">
-                                {% endif %}
-
-
                                     <i class="fa fa-4x {{ lesson.icon }} text-primary sr-icons" ></i>
-
-                                {% if links_active %}
                                 </button>
-                                {% endif %}
                                 <h3> {{ lesson.title }} </h3>
                                 <p>{{ lesson.summary }}</p>
 
@@ -62,7 +56,6 @@ Python 4-Day Workshop
 
 
                             <!-- Modal -->
-                            {% if links_active %}
                             <div id="modal_lesson_{{ lesson.num }}" class="modal fade" role="dialog">
                                 <div class="modal-dialog">
 
@@ -90,7 +83,6 @@ Python 4-Day Workshop
 
                                 </div>
                             </div>
-                            {% endif %}
 
                         {% endfor %}
 

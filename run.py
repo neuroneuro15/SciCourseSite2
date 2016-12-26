@@ -1,4 +1,4 @@
-from app import app, flatpages, pygments_style_defs, LINKS_ACTIVE, freezer
+from app import app, flatpages, pygments_style_defs
 from flask import render_template, make_response
 
 
@@ -6,17 +6,15 @@ from flask import render_template, make_response
 def index():
     return render_template('freelancer.html')
 
-@app.route('/workshop')
-def workshop_page():
+@app.route('/workshop/<name>')
+def workshop_page(name):
     page = flatpages.get('workshops')
-    workshop = page.meta
+    workshop = [el for el in page.meta['workshops'] if name in el['shorttitle']]
+    assert len(workshop) == 1
+    workshop = workshop[0]
+    day_pages = [[flatpages.get('lessons/{}'.format(lesson)) for lesson in day] for day in workshop['plan']]
 
-    day_pages = []
-    for idx, day in enumerate(workshop['plan']):
-        lessons = [flatpages.get('lessons/{}'.format(lesson)) for lesson in day]
-        day_pages.append((idx, lessons))
-
-    return render_template('workshop_summary.html', workshop=page, daydata=day_pages, links_active=LINKS_ACTIVE)
+    return render_template('workshop_summary.html', workshop=workshop, daydata=day_pages)
 
 
 

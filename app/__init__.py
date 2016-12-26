@@ -7,7 +7,6 @@ from flask_frozen import Freezer
 app = Flask(__name__)
 
 DEBUG = True
-LINKS_ACTIVE = True
 
 # Flask-FlatPages
 flatpages = FlatPages(app)
