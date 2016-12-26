@@ -3,8 +3,6 @@ day: 0
 num: 1
 icon: fa-terminal
 summary: Running programs, moving files, customizing your computer-- Everything can happen in the terminal.  No mouse required!
-exercises:
-  - testfile.csv
 
 ## Lesson Goals
   - Appreciate the Pros and Cons of GUIs vs Text-based computer interfaces.

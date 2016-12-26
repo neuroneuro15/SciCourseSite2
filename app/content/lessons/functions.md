@@ -3,8 +3,7 @@ day: 3
 num: 10
 icon: fa-briefcase
 summary: Increase your productivity and effectiveness by writing reusable code as functions and modules.
-exercises:
-  - testfile.csv
+
 
 # Lesson Goals
 

@@ -3,8 +3,6 @@ day: 3
 num: 12
 icon: fa-compass
 summary: Learn Jupyter Notebook, a powerful tool for interactively exploring your data, reporting your analysis, and logging your activities in a lab notebook.
-exercises:
-  - testfile.csv
 
 
 # Lesson Goals
