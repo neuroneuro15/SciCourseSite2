@@ -4,6 +4,8 @@
 {% block styles %}
     {{ super() }}
 
+    <link href="{{ url_for('static', filename='css/bootstrap.css') }}" rel="stylesheet">
+
     <!-- Theme CSS -->
     <link href="{{ url_for('static', filename='css/freelancer.css') }}" rel="stylesheet">
 
